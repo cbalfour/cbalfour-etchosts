@@ -1,0 +1,24 @@
+# Managed by puppet.
+<% if @add_ipv4_localhosts -%>
+127.0.0.1	localhost.localdomain localhost
+<% if @fqdn and @hostname -%>
+127.0.1.1 	<%= @fqdn %> <%= @hostname %>
+<% end -%>
+<% end -%>
+<% if @hosts -%>
+# Any other hosts we want to add
+<% @hosts.each do |host_addr, host_names| -%>
+<%= host_addr %>	<% host_names.each do |host_name| -%> <%= host_name -%> <% end %>
+<% end %>
+<% end -%>
+
+<% if @add_ipv6_localhosts -%>
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+<% end -%>
+

@@ -1,0 +1,14 @@
+{
+  "name": "cbalfour-etchosts",
+  "version": "0.1.0",
+  "author": "cbalfour",
+  "summary": "Manages /etc/hosts",
+  "license": "Apache 2.0",
+  "source": "https://github.com/cbalfour/cbalfour-etchosts.git",
+  "project_page": "https://github.com/cbalfour/cbalfour-etchosts",
+  "issues_url": "https://github.com/cbalfour/cbalfour-etchosts/issues",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
