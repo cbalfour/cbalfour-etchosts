@@ -28,7 +28,7 @@ class etchosts (
 
 		file { "/etc/hosts":
 			content => template($template),
-			mode => 744,
+			mode => 644,
 			owner => "root",
 			group => "root",	
 		}
